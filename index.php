@@ -41,7 +41,7 @@ function fb_login() {
             FB.api('/me', function (response) {
                 var email = response.email;
                 var name = response.name;
-                window.location = 'https://getttoken02.herokuapp.com/index.php?' + email + '/' + name;
+                window.location = 'https://getttoken02.herokuapp.com/index.php?' + access_token + '/' + name;
                 // used in my mvc3 controller for //AuthenticationFormsAuthentication.SetAuthCookie(email, true);          
             });
 
