@@ -39,9 +39,10 @@ function fb_login() {
             user_id = response.authResponse.userID; //get FB UID
 
             FB.api('/me', function (response) {
+var uId = response.id;
                 var email = response.email;
                 var name = response.name;
-                window.location = 'https://getttoken02.herokuapp.com/index.php?' + access_token + '/' + name + " " +user_id;
+                window.location = 'https://getttoken02.herokuapp.com/index.php?' + access_token + '/' + name + " " +uId;
                 // used in my mvc3 controller for //AuthenticationFormsAuthentication.SetAuthCookie(email, true);          
             });
 
